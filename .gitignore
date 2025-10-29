@@ -1,0 +1,54 @@
+# === Model / Large Files ===
+*.onnx
+*.zip
+*.pt
+*.pth
+*.bin
+*.h5
+*.tar
+*.tar.gz
+*.npz
+*.npy
+*.pkl
+*.ckpt
+*.weights
+
+# === Media (huge) ===
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# === Temporary / Generated ===
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.idea/
+*.vscode/
+.DS_Store
+
+# === Environments ===
+venv/
+.env/
+.env.*/
+node_modules/
+build/
+dist/
+outputs/
+experiments/
+models/
+weights/
+checkpoints/
+
+# === Specific known large files ===
+rescuebox/rescuebox_models.zip

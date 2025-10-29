@@ -1,0 +1,29 @@
+name: Lint
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  build:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install linters
+        run: |
+          pip install ruff black==24.10.0
+
+      - name: Run ruff (linter)
+        run: |
+          ruff check
+
+      - name: Run black (code format check)
+        run: |
+          black --version
+          black --check .

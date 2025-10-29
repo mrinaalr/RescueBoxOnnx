@@ -1,0 +1,77 @@
+[tool.poetry]
+name = "rescuebox"
+version = "2.1.0"
+description = ""
+authors = ["RescueBox Team"]
+packages = [{include = "rescuebox"}]
+
+[tool.poetry.scripts]
+rescuebox = "rescuebox.main:app"
+
+[tool.poetry.dependencies]
+requests = "^2.32.3"
+python = ">=3.11,<3.13"
+pyyaml = "^6.0.2"
+typer = "^0.12.5"
+llvmlite = "^0.44.0"
+pytest = "^8.3.4"
+httpx = "^0.28.1"
+# add dependencies common to all plugins here
+numpy = "2.1.0"
+# torch = "2.7.1"
+onnxruntime =  [ {version = "1.22" , platform = "win32"},
+                 {version = "1.21.0", platform = "linux"}
+]
+nvidia-cudnn-cu12 = {version = "9.5.1.17" , platform = "win32"}
+nvidia-cuda-runtime-cu12 = {version = "12.6.77" , platform = "win32"}
+onnxruntime-gpu = {version = "1.22" , platform = "win32"}
+opencv-python = ">=4.11.0.86,<5.0.0.0"
+ollama = ">=0.4.7,<0.5.0"
+pypdf2 = ">=3.0.1,<4.0.0"
+chromadb = "^1.0.4"
+pandas = ">=2.2.3,<3.0.0"
+pillow = ">=11.2.1,<12.0.0"
+fusepy = ">=3.0.1,<4.0.0"
+dlib = "*"
+torch-onnx = "*"
+
+
+rb-lib = { path = "src/rb-lib", develop = true }
+
+file-utils = { path = "src/file-utils", develop = true }
+doc-parser = { path = "src/doc-parser", develop = true }
+audio-transcription = { path = "src/audio-transcription", develop = true }
+age-and-gender-detection = { path = "src/age_and_gender_detection", develop = true }
+text-summary = {path = "src/text-summary", develop = true}
+face-match = {path = "src/face-detection-recognition", develop = true }
+deepfake-detection = {path = "src/deepfake-detection", develop = true}
+ufdr-mounter = { path = "src/ufdr-mounter", develop = true }
+
+hello-world = { path = "src/hello-world", develop = true }
+image-details = { path = "src/image-details", develop = true }
+image-summary = { path = "src/image-summary", develop = true }
+image-caption-blip-onnx = { path = "src/image-caption-blip-onnx", develop = true }
+
+deepfake-video = {path = "src/deepfake-video", develop = true}
+
+# Don't add new packages here, add them appropriately in the list above
+beautifulsoup4 = "^4.13.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+isort = "^5.13.2"
+pytest = "^8.3.3"
+ruff = "^0.7.1"
+pre-commit = "^4.0.1"
+
+[tool.poetry.group.api.dependencies]
+rb-api = { path = "src/rb-api", develop = true }
+
+[tool.poetry.group.bundling.dependencies]
+pyinstaller = "^5.13.2"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

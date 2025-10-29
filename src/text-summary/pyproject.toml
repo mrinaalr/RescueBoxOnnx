@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "text-summary"
+version = "2.0.0"
+description = "A project that helps summarize text."
+authors = ["Prasanna <prasanna.lakkur@gmail.com>"]
+packages = [{include = "text_summary"}]
+
+[tool.poetry.scripts]
+text-summary = "text_summary.main:app"
+
+[tool.poetry.dependencies]
+ollama = "*"
+pypdf2 = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

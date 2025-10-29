@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='index/main.css') }}"/>
+    <title>Rescuebox CLI</title>
+</head>
+<body>
+    <!-- Embed JSON data in a script tag -->
+    <script id="tree" type="application/json">
+        {{ tree | safe }}
+    </script>
+
+    <!-- Mounting point for React -->
+    <div id="react-root"></div>
+
+    <!-- Link to the compiled React bundle -->
+    <script type="module" src="{{ url_for('static', path='index/main.js') }}"></script>
+</body>
+</html>
