@@ -13,6 +13,12 @@
 *.ckpt
 *.weights
 
+# === Node and Dependencies ===
+node_modules/
+RescueBox-Desktop/node_modules/
+build/
+dist/
+
 # === Media (huge) ===
 *.mp4
 *.mov
@@ -41,9 +47,6 @@ __pycache__/
 venv/
 .env/
 .env.*/
-node_modules/
-build/
-dist/
 outputs/
 experiments/
 models/
@@ -52,3 +55,8 @@ checkpoints/
 
 # === Specific known large files ===
 rescuebox/rescuebox_models.zip
+src/deepfake-video.zip
+src/deepfake-video/deepfake_video/vit_model.onnx
+src/deepfake-detection/deepfake_detection/onnx_models/bnext_M_dffd_model.onnx
+RescueBox-Desktop/node_modules/electron/dist/Electron.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+
