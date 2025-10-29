@@ -1,4 +1,13 @@
-# RescueBox from UMass Rescue Lab
+# RescueBox from UMass Rescue Lab - modified during Hackathon 10/24
+
+- goal is to convert exisiting deepfake video detector model to ONNX (complete)
+- update dependecnies / plugin to use model (complete)
+- update video_evaluator.py to use the new ONNX model (in progress)
+
+
+--------------------------------------------------------------------------------------------
+Old README - info for set up / env / getting backend and server running
+--------------------------------------------------------------------------------------------
 
 This branch is specific to hackathon 2025 work.
 
