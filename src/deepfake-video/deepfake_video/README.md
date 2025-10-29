@@ -1,5 +1,14 @@
 # Deepfake Detection Suite
 
+updated section during 10/24 hackathon
+- update plugin to behave like other models
+- update dependencies
+- update convert.py and server.py
+- create .onnx file (not included here, on google drive / local machine)
+
+
+--------------------------------------------------------------------------
+
 This repository contains tools for detecting deepfakes in **videos** and **images** using state-of-the-art machine learning models. It supports batch processing, configurable thresholds, and high-accuracy predictions.
 
 ---
